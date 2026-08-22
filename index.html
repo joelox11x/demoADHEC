@@ -381,25 +381,19 @@ section{padding:108px 0;position:relative;}
 
 /* ================= CONTACTO ================= */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
-.contact-grid>*{min-width:0;}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
-@media(max-width:640px){.contact-grid{gap:40px;}}
-.contact-card{border:1px solid rgba(255,255,255,.16);padding:30px;border-radius:var(--radius);min-width:0;}
-@media(max-width:480px){.contact-card{padding:22px 18px;}}
+.contact-card{border:1px solid rgba(255,255,255,.16);padding:30px;border-radius:var(--radius);}
 .contact-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1);}
 .contact-item:last-child{border-bottom:none;}
 .contact-item .ic{width:20px;height:20px;color:var(--gold);flex-shrink:0;margin-top:2px;}
 .contact-item .lab{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin-bottom:4px;}
-.contact-item .val{color:#fff;font-size:15.5px;overflow-wrap:anywhere;word-break:break-word;}
-.contact-item{min-width:0;}
-.contact-item > div{min-width:0;}
+.contact-item .val{color:#fff;font-size:15.5px;}
 .contact-item a.val:hover{color:var(--gold);}
 
-form.quote-form{display:flex;flex-direction:column;gap:16px;min-width:0;}
+form.quote-form{display:flex;flex-direction:column;gap:16px;}
 .quote-form input, .quote-form select, .quote-form textarea{
-  background:transparent;border:1px solid rgba(255,255,255,.28);color:#fff;padding:14px 16px;font-family:'Work Sans';font-size:16px;border-radius:var(--radius);
+  background:transparent;border:1px solid rgba(255,255,255,.28);color:#fff;padding:14px 16px;font-family:'Work Sans';font-size:14.5px;border-radius:var(--radius);
   width:100%;
-  max-width:100%;
 }
 .quote-form textarea{resize:vertical;min-height:100px;}
 .quote-form ::placeholder{color:#8FA0AC;}
@@ -493,7 +487,7 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
     <div class="dim-row">
       <div class="dim"><span class="tick-end"></span>
         <div class="dim-label">01 — Cobertura</div>
-        <div class="dim-value">Guadalajara, Guanajuato, Monterrey · CDMX</div>
+        <div class="dim-value">Zac. · Ags. · Puebla · CDMX</div>
       </div>
       <div class="dim"><span class="tick-end"></span>
         <div class="dim-label">02 — Especialidad</div>
@@ -762,8 +756,8 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
             <div><div class="lab">WhatsApp</div><a class="val" target="_blank" rel="noopener" href="https://wa.me/524492911162?text=Hola%2C%20quiero%20cotizar%20un%20proyecto">449 291 1162</a></div>
           </div>
           <div class="contact-item">
-            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
-            <div><div class="lab">Correo</div><a class="val" href="mailto:adhecconstruccion.123@gmail.com">adhecconstruccion.123@gmail.com</a></div>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div><div class="lab">Teléfono secundario</div><a class="val" href="tel:+524931551113">493 155 1113</a></div>
           </div>
           <div class="contact-item">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -779,7 +773,7 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
       <form class="quote-form reveal" id="quoteForm">
         <div class="row2">
           <div><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required></div>
-          <div><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" placeholder="10 dígitos" required></div>
+          <div><label for="telefono">Teléfono secundario</label><input id="telefono" name="telefono secundario" type="tel" placeholder="10 dígitos" required></div>
         </div>
         <div>
           <label for="servicio">Servicio de interés</label>
@@ -822,6 +816,11 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
           <a href="#servicios">Servicios</a>
           <a href="#proyectos">Proyectos</a>
           <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contacto</h5>
+          <a href="https://wa.me/524492911162?text=Hola%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener">WhatsApp: 449 291 1162</a>
+          <span>Tel: 493 155 1113</span>
         </div>
         <div class="footer-col">
           <h5>Ubicación</h5>
