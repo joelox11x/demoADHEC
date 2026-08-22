@@ -31,7 +31,7 @@
 }
 
 *,*::before,*::after{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overflow-x:hidden;width:100%;}
 body{
   margin:0;
   background:var(--paper);
@@ -40,6 +40,8 @@ body{
   font-size:16px;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  width:100%;
 }
 img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
@@ -300,6 +302,50 @@ section{padding:108px 0;position:relative;}
   background:linear-gradient(to top, rgba(7,21,34,.92), transparent);
   color:#fff;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;
 }
+@media(max-width:640px){
+  .finish-scroll{margin:0 -20px;padding-left:20px;padding-right:20px;}
+  .finish-card{flex:0 0 220px;height:260px;}
+}
+
+/* ================= PROYECTO DESTACADO (AutoZone) ================= */
+.project-featured{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);}
+.project-featured-head{
+  display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:20px;
+}
+.project-featured-head h4{
+  font-family:'Big Shoulders Display',sans-serif;font-size:clamp(22px,3vw,28px);font-weight:800;
+  color:var(--navy-900);text-transform:none;letter-spacing:0;
+}
+.project-featured-head .loc{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--steel);letter-spacing:.04em;}
+.az-gallery{
+  display:flex;gap:14px;overflow-x:auto;padding-bottom:14px;scroll-snap-type:x mandatory;
+  margin:0 -32px;padding-left:32px;padding-right:32px;
+  -webkit-overflow-scrolling:touch;
+}
+.az-gallery::-webkit-scrollbar{height:8px;}
+.az-photo{
+  flex:0 0 260px;scroll-snap-align:start;border-radius:var(--radius);overflow:hidden;
+  height:190px;cursor:pointer;background:var(--paper-3);
+}
+.az-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;display:block;}
+.az-photo:hover img{transform:scale(1.05);}
+@media(max-width:640px){
+  .az-gallery{margin:0 -20px;padding-left:20px;padding-right:20px;}
+  .az-photo{flex:0 0 200px;height:150px;}
+}
+
+/* ================= WHATSAPP FLOTANTE ================= */
+.whatsapp-float{
+  position:fixed;left:22px;bottom:22px;width:56px;height:56px;border-radius:50%;
+  background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.3);z-index:90;transition:transform .25s ease;
+}
+.whatsapp-float:hover{transform:translateY(-3px);}
+.whatsapp-float svg{width:28px;height:28px;}
+@media(max-width:640px){
+  .whatsapp-float{width:50px;height:50px;left:16px;bottom:16px;}
+  .whatsapp-float svg{width:25px;height:25px;}
+}
 
 /* ================= PROYECTOS ================= */
 .project-list{display:flex;flex-direction:column;}
@@ -309,9 +355,10 @@ section{padding:108px 0;position:relative;}
 }
 .project-list .project-row:last-child{border-bottom:1px solid var(--line);}
 .project-row:hover{background:rgba(11,32,54,0.03);}
-.project-thumb{width:180px;height:110px;border-radius:var(--radius);overflow:hidden;background:var(--paper-2);}
+.project-thumb{width:180px;height:110px;border-radius:var(--radius);overflow:hidden;background:var(--paper-2);flex-shrink:0;}
 .project-thumb img{width:100%;height:100%;object-fit:cover;}
-.project-info h4{font-family:'Big Shoulders Display',sans-serif;font-size:22px;letter-spacing:0;color:var(--navy-900);text-transform:none;font-weight:700;}
+.project-info{min-width:0;}
+.project-info h4{font-family:'Big Shoulders Display',sans-serif;font-size:22px;letter-spacing:0;color:var(--navy-900);text-transform:none;font-weight:700;overflow-wrap:break-word;}
 .project-info .loc{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--steel);letter-spacing:.04em;margin-top:6px;display:inline-block;}
 .project-arrow{font-family:'JetBrains Mono',monospace;font-size:20px;color:var(--gold-deep);}
 @media(max-width:700px){
@@ -451,8 +498,8 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
         <div class="dim-value">Walmart · Home Depot · AutoZone</div>
       </div>
       <div class="dim"><span class="tick-end"></span>
-        <div class="dim-label">04 — Contacto directo</div>
-        <div class="dim-value">493 155 1113</div>
+        <div class="dim-label">04 — WhatsApp</div>
+        <div class="dim-value">449 291 1162</div>
       </div>
     </div>
 
@@ -644,6 +691,29 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
         <div class="project-info"><h4>Colocación de juntas en concreto</h4><span class="loc mono">Walmart Las Ánimas — Puebla</span></div>
         <div class="project-arrow">→</div>
       </div>
+      <div class="project-featured reveal">
+        <div class="project-featured-head">
+          <h4>Proyecto destacado &mdash; AutoZone</h4>
+          <span class="loc mono">Trabajo entregado para AutoZone</span>
+        </div>
+        <div class="az-gallery" id="azGallery">
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-2.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-2.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-1.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-1.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-4.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-4.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-3.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-3.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-2.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-2.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-1.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-1.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-5.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-5.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-2.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-2.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-3.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-3.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-4.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-4.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-4.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-4.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-3.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-3.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -682,8 +752,8 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
       <div class="reveal">
         <div class="contact-card">
           <div class="contact-item">
-            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <div><div class="lab">Teléfono</div><a class="val" href="tel:+524931551113">493 155 1113</a> · <a class="val" href="tel:+524492911162">449 291 1162</a></div>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 003.83 1h0a7.94 7.94 0 007.94-7.94 7.86 7.86 0 00-2.37-5.6z"/><path d="M9.4 8.5c.15-.34.32-.35.5-.35h.4c.14 0 .3 0 .45.35.16.36.6 1.44.65 1.55.06.1.09.24.02.38-.07.14-.11.23-.22.35-.11.13-.24.28-.34.38-.11.11-.23.23-.1.46.14.24.6 1 1.3 1.6.9.8 1.65 1.05 1.9 1.17.24.11.38.1.52-.05.15-.16.62-.7.78-.95.16-.24.32-.2.53-.12.22.08 1.4.66 1.63.78.24.12.4.18.46.28.06.11.06.6-.14 1.18-.2.57-1.15 1.1-1.6 1.16-.4.06-.9.08-1.46-.1a10.4 10.4 0 01-1.9-.72 9.2 9.2 0 01-3.5-3.1c-.4-.55-.85-1.28-.9-2.32-.05-1.03.5-1.53.68-1.74z"/></svg>
+            <div><div class="lab">WhatsApp</div><a class="val" target="_blank" rel="noopener" href="https://wa.me/524492911162?text=Hola%2C%20quiero%20cotizar%20un%20proyecto">449 291 1162</a></div>
           </div>
           <div class="contact-item">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
@@ -748,12 +818,6 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
           <a href="#contacto">Contacto</a>
         </div>
         <div class="footer-col">
-          <h5>Contacto</h5>
-          <span>493 155 1113</span>
-          <span>449 291 1162</span>
-          <span>adhecconstruccion.123@gmail.com</span>
-        </div>
-        <div class="footer-col">
           <h5>Ubicación</h5>
           <span>Plan de Guadalupe N° 114</span>
           <span>Col. Venustiano Carranza</span>
@@ -773,6 +837,9 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
   <img id="lightboxImg" src="" alt="">
 </div>
 
+<a class="whatsapp-float" href="https://wa.me/524492911162?text=Hola%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 003.83 1h0a7.94 7.94 0 007.94-7.94 7.86 7.86 0 00-2.37-5.6zm-5.55 12.2h0a6.6 6.6 0 01-3.37-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.6 6.6 0 01-1-3.51 6.62 6.62 0 0111.3-4.68 6.58 6.58 0 011.94 4.68 6.62 6.62 0 01-6.6 6.6zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.19-.5.64-.62.78-.11.13-.23.15-.43.05-.2-.1-.83-.3-1.58-.97a5.93 5.93 0 01-1.09-1.36c-.11-.2 0-.3.1-.4.1-.1.2-.24.31-.35.1-.12.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.34h-.38c-.13 0-.34.05-.52.24-.18.19-.68.67-.68 1.63s.7 1.9.79 2.03c.1.13 1.37 2.1 3.32 2.94.46.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.17-.46.17-.86.12-.94-.05-.09-.18-.14-.38-.24z"/></svg>
+</a>
 <div class="back-to-top" id="backTop">↑</div>
 
 <script>
@@ -806,6 +873,12 @@ const lightboxImg = document.getElementById('lightboxImg');
 document.querySelectorAll('.project-row').forEach(row => {
   row.addEventListener('click', () => {
     lightboxImg.src = row.getAttribute('data-img');
+    lightbox.classList.add('open');
+  });
+});
+document.querySelectorAll('.az-photo').forEach(el => {
+  el.addEventListener('click', () => {
+    lightboxImg.src = el.getAttribute('data-img');
     lightbox.classList.add('open');
   });
 });
