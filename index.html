@@ -328,6 +328,7 @@ section{padding:108px 0;position:relative;}
   height:190px;cursor:pointer;background:var(--paper-3);
 }
 .az-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;display:block;}
+.az-photo video{width:100%;height:100%;object-fit:cover;display:block;background:#000;}
 .az-photo:hover img{transform:scale(1.05);}
 @media(max-width:640px){
   .az-gallery{margin:0 -20px;padding-left:20px;padding-right:20px;}
@@ -336,15 +337,19 @@ section{padding:108px 0;position:relative;}
 
 /* ================= WHATSAPP FLOTANTE ================= */
 .whatsapp-float{
-  position:fixed;left:22px;bottom:22px;width:56px;height:56px;border-radius:50%;
+  position:fixed;left:22px;width:56px;height:56px;border-radius:50%;
   background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;
   box-shadow:0 6px 18px rgba(0,0,0,.3);z-index:90;transition:transform .25s ease;
 }
 .whatsapp-float:hover{transform:translateY(-3px);}
 .whatsapp-float svg{width:28px;height:28px;}
+.whatsapp-float.wa-1{bottom:88px;}
+.whatsapp-float.wa-2{bottom:22px;}
 @media(max-width:640px){
-  .whatsapp-float{width:50px;height:50px;left:16px;bottom:16px;}
+  .whatsapp-float{width:50px;height:50px;left:16px;}
   .whatsapp-float svg{width:25px;height:25px;}
+  .whatsapp-float.wa-1{bottom:78px;}
+  .whatsapp-float.wa-2{bottom:16px;}
 }
 
 /* ================= PROYECTOS ================= */
@@ -487,7 +492,7 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
     <div class="dim-row">
       <div class="dim"><span class="tick-end"></span>
         <div class="dim-label">01 — Cobertura</div>
-        <div class="dim-value">Zac. · Ags. · Puebla · CDMX</div>
+        <div class="dim-value">Zac. · Ags. · Puebla · Guadalajara · Guanajuato · Monterrey · CDMX</div>
       </div>
       <div class="dim"><span class="tick-end"></span>
         <div class="dim-label">02 — Especialidad</div>
@@ -713,6 +718,21 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
           <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
           <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-4.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-4.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
           <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-3.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-3.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM-1.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM-1.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM-2.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM-2.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="project-featured reveal" style="margin-top:24px;">
+        <div class="project-featured-head">
+          <h4>Video de nuestro trabajo</h4>
+          <span class="loc mono">Avance de obra en video</span>
+        </div>
+        <div class="az-gallery" id="videoGallery">
+          <div class="az-photo"><video src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Video-2026-08-26-at-11.41.13-AM-2.mp4" controls playsinline preload="metadata"></video></div>
+          <div class="az-photo"><video src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Video-2026-08-26-at-11.41.13-AM-1.mp4" controls playsinline preload="metadata"></video></div>
+          <div class="az-photo"><video src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Video-2026-08-26-at-11.41.13-AM.mp4" controls playsinline preload="metadata"></video></div>
         </div>
       </div>
     </div>
@@ -757,8 +777,8 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
             <div><div class="lab">WhatsApp</div><a class="val" target="_blank" rel="noopener" href="https://wa.me/524492911162?text=Hola%2C%20quiero%20cotizar%20un%20proyecto">449 291 1162</a></div>
           </div>
           <div class="contact-item">
-            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <div><div class="lab">Teléfono secundario</div><a class="val" href="tel:+524931551113">493 155 1113</a></div>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 003.83 1h0a7.94 7.94 0 007.94-7.94 7.86 7.86 0 00-2.37-5.6z"/></svg>
+            <div><div class="lab">WhatsApp secundario</div><a class="val" target="_blank" rel="noopener" href="https://wa.me/524931551113?text=Hola%2C%20quiero%20cotizar%20un%20proyecto">493 155 1113</a></div>
           </div>
           <div class="contact-item">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -821,7 +841,7 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
         <div class="footer-col">
           <h5>Contacto</h5>
           <a href="https://wa.me/524492911162?text=Hola%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener">WhatsApp: 449 291 1162</a>
-          <span>Tel: 493 155 1113</span>
+          <a href="https://wa.me/524931551113?text=Hola%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener">WhatsApp: 493 155 1113</a>
         </div>
         <div class="footer-col">
           <h5>Ubicación</h5>
@@ -843,7 +863,10 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
   <img id="lightboxImg" src="" alt="">
 </div>
 
-<a class="whatsapp-float" href="https://wa.me/524492911162?text=Hola%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+<a class="whatsapp-float wa-1" href="https://wa.me/524492911162?text=Hola%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp al 449 291 1162">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 003.83 1h0a7.94 7.94 0 007.94-7.94 7.86 7.86 0 00-2.37-5.6zm-5.55 12.2h0a6.6 6.6 0 01-3.37-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.6 6.6 0 01-1-3.51 6.62 6.62 0 0111.3-4.68 6.58 6.58 0 011.94 4.68 6.62 6.62 0 01-6.6 6.6zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.19-.5.64-.62.78-.11.13-.23.15-.43.05-.2-.1-.83-.3-1.58-.97a5.93 5.93 0 01-1.09-1.36c-.11-.2 0-.3.1-.4.1-.1.2-.24.31-.35.1-.12.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.34h-.38c-.13 0-.34.05-.52.24-.18.19-.68.67-.68 1.63s.7 1.9.79 2.03c.1.13 1.37 2.1 3.32 2.94.46.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.17-.46.17-.86.12-.94-.05-.09-.18-.14-.38-.24z"/></svg>
+</a>
+<a class="whatsapp-float wa-2" href="https://wa.me/524931551113?text=Hola%2C%20quiero%20cotizar%20un%20proyecto" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp al 493 155 1113">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 003.83 1h0a7.94 7.94 0 007.94-7.94 7.86 7.86 0 00-2.37-5.6zm-5.55 12.2h0a6.6 6.6 0 01-3.37-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.6 6.6 0 01-1-3.51 6.62 6.62 0 0111.3-4.68 6.58 6.58 0 011.94 4.68 6.62 6.62 0 01-6.6 6.6zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.19-.5.64-.62.78-.11.13-.23.15-.43.05-.2-.1-.83-.3-1.58-.97a5.93 5.93 0 01-1.09-1.36c-.11-.2 0-.3.1-.4.1-.1.2-.24.31-.35.1-.12.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.34h-.38c-.13 0-.34.05-.52.24-.18.19-.68.67-.68 1.63s.7 1.9.79 2.03c.1.13 1.37 2.1 3.32 2.94.46.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.17-.46.17-.86.12-.94-.05-.09-.18-.14-.38-.24z"/></svg>
 </a>
 <div class="back-to-top" id="backTop">↑</div>
