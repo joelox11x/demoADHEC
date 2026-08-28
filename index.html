@@ -333,7 +333,13 @@ section{padding:108px 0;position:relative;}
 @media(max-width:640px){
   .az-gallery{margin:0 -20px;padding-left:20px;padding-right:20px;}
   .az-photo{flex:0 0 200px;height:150px;}
+  #videoGallery{flex-direction:column;overflow-x:visible;margin:0;padding:0;}
+  #videoGallery .az-photo{flex:0 0 auto;width:100%;height:220px;}
 }
+@media(min-width:641px){
+  #videoGallery{justify-content:center;}
+}
+#videoGallery .az-photo{flex:0 0 340px;height:240px;}
 
 /* ================= WHATSAPP FLOTANTE ================= */
 .whatsapp-float{
@@ -703,24 +709,24 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
           <span class="loc mono">Trabajo entregado para AutoZone</span>
         </div>
         <div class="az-gallery" id="azGallery">
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-2.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-2.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-1.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-1.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-4.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-4.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-3.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-3.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-2.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-2.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-1.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-1.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-5.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-5.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-2.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-2.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-3.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-3.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-4.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-4.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-4.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-4.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-3.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-3.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM-1.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM-1.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
-          <div class="az-photo" data-img="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM-2.jpeg"><img src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM-2.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-2.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-2.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-1.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-1.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-4.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-4.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-3.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-3.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-2.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-2.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-1.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM-1.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.46-PM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-5.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-5.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-2.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-2.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-3.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-3.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-4.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM-4.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.45-PM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-4.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-4.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-3.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-21-at-6.20.47-PM-3.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM-1.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM-1.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
+          <div class="az-photo" data-img="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM-2.jpeg"><img src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-26-at-11.47.21-AM-2.jpeg" alt="Trabajo realizado para AutoZone" loading="lazy"></div>
         </div>
       </div>
 
@@ -730,9 +736,9 @@ footer{background:var(--navy-950);color:#8FA0AC;padding:60px 0 26px;}
           <span class="loc mono">Avance de obra en video</span>
         </div>
         <div class="az-gallery" id="videoGallery">
-          <div class="az-photo"><video src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Video-2026-08-26-at-11.41.13-AM-2.mp4" controls playsinline preload="metadata"></video></div>
-          <div class="az-photo"><video src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Video-2026-08-26-at-11.41.13-AM-1.mp4" controls playsinline preload="metadata"></video></div>
-          <div class="az-photo"><video src="http://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Video-2026-08-26-at-11.41.13-AM.mp4" controls playsinline preload="metadata"></video></div>
+          <div class="az-photo"><video src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Video-2026-08-26-at-11.41.13-AM-2.mp4" controls playsinline preload="metadata"></video></div>
+          <div class="az-photo"><video src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Video-2026-08-26-at-11.41.13-AM-1.mp4" controls playsinline preload="metadata"></video></div>
+          <div class="az-photo"><video src="https://arqfra-ai.com/wp-content/uploads/2026/08/WhatsApp-Video-2026-08-26-at-11.41.13-AM.mp4" controls playsinline preload="metadata"></video></div>
         </div>
       </div>
     </div>
